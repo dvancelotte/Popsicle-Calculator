@@ -2,16 +2,14 @@
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-    <title>Popsicle Calculator</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/calculator.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Popsicle Calculator</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/calculator.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
     
     <body>
@@ -27,39 +25,46 @@
                 <div class="nhac3"></div>
                 <div class="HidenNhacs"></div>
                 <div class="elements">
-                    <div class="display">I GO BACK TO BLACK</div>
-                    <button type="button" class="btn buttons-default" id="CE">CE</button>
+                    <div class="display" id="display">0</div>
+                    <button type="button" class="btn buttons-default" id="CE" onclick="Clear();">CE</button>
 
                     <div class="contanier-buttons">
-                        <button type="button" class="btn buttons-default" id="button">7</button>
-                        <button type="button" class="btn buttons-default">8</button>
-                        <button type="button" class="btn buttons-default">9</button>
-                        <button type="button" class="btn buttons-default">÷</button>
+                        <button type="button" class="btn buttons-default" id="button" onclick="ShowDisplay(7);">7</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(8);">8</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(9);">9</button>
+                        <button type="button" class="btn buttons-default" onclick="Operation('/');" >÷</button>
                     </div>
 
                     <div class="contanier-buttons">
-                        <button type="button" class="btn buttons-default">4</button>
-                        <button type="button" class="btn buttons-default">5</button>
-                        <button type="button" class="btn buttons-default">6</button>
-                        <button type="button" class="btn buttons-default">X</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(4);">4</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(5);">5</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(6);">6</button>
+                        <button type="button" class="btn buttons-default" onclick="Operation('X');">X</button>
                     </div> 
 
                     <div class="contanier-buttons">
-                        <button type="button" class="btn buttons-default">1</button>
-                        <button type="button" class="btn buttons-default">2</button>
-                        <button type="button" class="btn buttons-default">3</button>
-                        <button type="button" class="btn buttons-default">-</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(1);">1</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(2);">2</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(3);">3</button>
+                        <button type="button" class="btn buttons-default" onclick="Operation('-');">-</button>
                     </div>
 
                     <div class="contanier-buttons">
-                        <button type="button" class="btn buttons-default">0</button>
-                        <button type="button" class="btn buttons-default">.</button>
-                        <button type="button" class="btn buttons-default" id="Equals">=</button>
-                        <button type="button" class="btn buttons-default">+</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay(0);">0</button>
+                        <button type="button" class="btn buttons-default" onclick="ShowDisplay('.');">.</button>
+                        <button type="button" class="btn buttons-default" id="Equals" onclick="Operation('=');">=</button>
+                        <button type="button" class="btn buttons-default" onclick="Operation('+');">+</button>
                     </div>
                 </div>
             </div>
             <div class="pallete"></div>
         </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/calculator.js"></script>
+    <script language="javascript">
+    </script>
+        
     
     </body>
